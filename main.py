@@ -10,5 +10,5 @@ parser.add_argument("--outdir", help="Directory where the backup of the input fi
 parser.add_argument("--period", help="Period when the backup will be executed. In crontab format * * * * * (minutes, hour, day of the week, month, day of the month)")
 arguments = parser.parse_args()
 crontab = CrontabConfigurer()
-backup_script_path = os.path.dirname(os.path.abspath(__file__)) + "/system_backup.py"
-crontab.add_crontab_job(arguments.period + " " + backup_script_path + " " + arguments.indir + " " + arguments.outdir)
+backup_script_cmd = "python3 " + os.path.dirname(os.path.abspath(__file__)) + "/system_backup.py"
+crontab.add_crontab_job(arguments.period + " " + backup_script_cmd + " " + arguments.indir + " " + arguments.outdir)

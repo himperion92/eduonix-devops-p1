@@ -2,7 +2,7 @@
 import os
 import argparse
 
-from CrontabConfigurer import CrontabConfigurer
+from CrontabConfigurer.CrontabConfigurer import CrontabConfigurer
 
 parser = argparse.ArgumentParser(description="Configures the backup of a set of files periodically.")
 parser.add_argument("--indir", help="Directory which contains the files whose backup will be performed periodically.")

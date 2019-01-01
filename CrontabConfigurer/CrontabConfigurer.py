@@ -24,3 +24,8 @@ class CrontabConfigurer:
 			for cmd_step in steps:
 				if subprocess.call(cmd_step) != 0:
 					raise Exception("Something went wrong when trying to configure new crontab task! Last erroneous command executed: %s", cmd_step)
+			self._logger.info("Crontab task successfully updated!")
+		else:
+			raise TypeError("'cron_job' variable should be an string with format: * * * * * [cmd]," + 
+			                " where '*' are minutes, hour, day of the week, month, day of the month. ")
+				

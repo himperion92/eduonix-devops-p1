@@ -7,7 +7,7 @@ This project is meant to configure a linux-based machine crontab daemon in order
 
 You can type `main.py --help` in order to get a detailed description of the arguments.
 
-*Example:* `python3 main.py --indir /home/adam/workspace/project1 --outdir /media/externalDrive1 --period 00 12 * * *
+*Example:* `python3 main.py --indir /home/adam/workspace/project1 --outdir /media/externalDrive1 --period 00 12 * * *`
 
 *In the example mentioned above, the script would permanently configure crontab to perform a backup of all the files contained in /home/adam/workspace/project1 directory into the /media/externalDrive1 location. This operation would be performed each day at 12:00 pm*
 
